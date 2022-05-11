@@ -1,0 +1,7 @@
+.baner {
+  height: 80vh;
+  background: url("img/hack.jpg");
+  background-size: cover;
+  background-position: center;
+  color: rgb(31, 95, 121);
+}

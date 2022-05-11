@@ -1,0 +1,54 @@
+<div class="container">
+    <br>
+    <div class="card">
+        <div class="col m-1">
+            <h2>Lista dados</h2>
+            <button class="btn btn-danger mb-1">Registu</button>
+            <div class="container col-md-4">
+                <form class="d-flex me-3">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Foto</th>
+                        <th scope="col">Naran kompletu</th>
+                        <th scope="col">Sexu</th>
+                        <th scope="col">No Eleitoral</th>
+                        <th scope="col">Aldeia</th>
+                        <th scope="col">No Level</th>
+                        <th scope="col">No kartaun</th>
+                        <th scope="col">Grupo</th>
+                        <th scope="col">Aksaun</th>
+                    </tr>
+                </thead>
+                <?php $no=1; ?>
+                <?php foreach($ptl as $ptls) : ?>
+                <tbody>
+                    <tr>
+                        <th><?= $no; ?></th>
+                        <td>
+                            <img src="img/<?= $ptls['foto'] ?>" alt="iks" width="50">
+                        </td>
+                        <td><?= $ptls['naran_completu'] ?></td>
+                        <td><?= $ptls['sexu'] ?></td>
+                        <td><?= $ptls['no_eleitoral'] ?></td>
+                        <td><?= $ptls['aldeia'] ?></td>
+                        <td><?= $ptls['no_level'] ?></td>
+                        <td><?= $ptls['no_kartaun'] ?></td>
+                        <td><?= $ptls['grupo'] ?></td>
+                        <td>
+                            <button class="btn btn-sm btn-dark" href="">Edit</button>
+                            <button class="btn btn-sm btn-danger" href="">Hapus</button>
+                        </td>
+                    </tr>
+                </tbody>
+                <?php $no++; ?>
+                <?php endforeach; ?>
+            </table>
+        </div>
+    </div>
+</div>
